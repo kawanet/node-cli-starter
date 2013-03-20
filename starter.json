@@ -3,6 +3,7 @@
     "description": "Node.js CLI Module Starter",
     "repository": "git://github.com/kawanet/node-cli-starter.git",
     "author": "@kawanet",
+    "starter.version": "1.0",
     "starter.parameters": {
         "name": "package name: ex. 'node-my-module'",
         "description": "module description",
