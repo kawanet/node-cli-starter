@@ -1,13 +1,13 @@
 {
-    "name": "node-starter-cli",
-    "description": "Node.js Starter Kit for CLI",
-    "repository": "https://github.com/kawanet/npm-starter-cli.git",
+    "name": "node-cli-starter",
+    "description": "Node.js CLI Module Starter",
+    "repository": "git://github.com/kawanet/node-cli-starter.git",
     "author": "@kawanet",
     "starter.parameters": {
         "name": "package name: ex. 'node-my-module'",
         "description": "module description",
         "repository": "git repository URL",
-        "author": "module author: ex. 'kawanet'",
+        "author": "module author: ex. '@twitter'",
         "module": "class name: ex. 'MyModule'",
         "method": "first method name: ex. 'load'",
         "short": "short name: ex. 'mymod'"

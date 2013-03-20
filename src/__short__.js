@@ -28,5 +28,5 @@ __module__.prototype.__method__ = function(input) {
         "bar": this.opts.bar,
         "input": input
     };
-    this.emit("done", result);
+    this.emit("complete", result);
 };

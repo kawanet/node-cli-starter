@@ -15,8 +15,8 @@ describe('__module__', function() {
             __short__ = new __module__(opts);
         });
 
-        it('emit "done" on success', function(done) {
-            __short__.on("done", function(result) {
+        it('emit "complete" on success', function(done) {
+            __short__.on("complete", function(result) {
                 // console.warn(result);
                 expect(result).to.not.be.empty;
                 done();
@@ -38,7 +38,7 @@ describe('__module__', function() {
                 // console.warn(info);
                 buf.push(info);
             });
-            __short__.on("done", function(result) {
+            __short__.on("complete", function(result) {
                 // console.warn(result);
                 expect(buf).to.not.be.empty;
                 done();

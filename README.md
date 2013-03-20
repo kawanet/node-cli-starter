@@ -1,6 +1,6 @@
-# StarterCLI - Node.js Starter Kit for CLI
+# node-cli-starter - Node.js CLI Module Starter
 
-Node.js Starter Kit for CLI
+Node.js CLI Module Starter
 
 ## Usage
 
