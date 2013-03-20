@@ -1,0 +1,17 @@
+{
+    "name": "node-starter-cli",
+    "version": "0.0.0",
+    "description": "Node.js Starter Kit for CLI",
+    "main": "src/__short__.js",
+    "dependencies": {
+        "commander": "*"
+    },
+    "devDependencies": {
+        "chai": "*",
+        "grunt": "*",
+        "grunt-mocha-test": "*"
+    },
+    "repository": "https://github.com/kawanet/node-starter-cli.git",
+    "author": "@kawanet",
+    "license": "MIT"
+}
