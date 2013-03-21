@@ -12,5 +12,8 @@
         "module": "class name: ex. 'MyModule'",
         "method": "first method name: ex. 'load'",
         "short": "short name: ex. 'mymod'"
-    }
+    },
+    "starter.remove": [
+        "bin/node-cli-starter.sh"
+    ]
 }

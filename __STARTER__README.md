@@ -1,12 +1,25 @@
-# node-cli-starter - Node.js CLI Module Starter
+# __name__ - __description__
 
-Node.js CLI Module Starter
+__description__
 
 ## Usage
 
-```sh
-    npm install -g git-starter
-    git-starter node-cli-starter my-module
+```javascript
+    var __short__ = new __module__(program);
+
+    __short__.on("done", function(result) {
+        console.log(result);
+    });
+
+    __short__.on("error", function(err) {
+        console.error(err);
+    });
+
+    __short__.on("info", function(info) {
+        console.log(info);
+    });
+
+    __short__.__method__(input);
 ```
 
 ## Author

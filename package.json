@@ -2,9 +2,10 @@
     "name": "node-cli-starter",
     "version": "0.0.1",
     "description": "Node.js CLI Module Starter",
-    "main": "src/__short__.js",
+    "main": "lib/__short__.js",
     "dependencies": {
-        "commander": "*"
+        "commander": "*",
+        "git-starter": "git://github.com/kawanet/git-starter.git"
     },
     "devDependencies": {
         "chai": "*",
