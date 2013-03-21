@@ -13,7 +13,7 @@
         "method": "first method name: ex. 'load'",
         "short": "short name: ex. 'mymod'"
     },
-    "starter.remove": [
-        "bin/node-cli-starter.sh"
+    "starter.skip": [
+        "*.jpg", "*.png", "*.gif"
     ]
 }

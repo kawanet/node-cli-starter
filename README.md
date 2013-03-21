@@ -1,6 +1,6 @@
 # node-cli-starter - Node.js CLI Module Starter
 
-Node.js CLI Module Starter
+Generate a Node.js module skelton package for CLI applications.
 
 ## Usage
 
