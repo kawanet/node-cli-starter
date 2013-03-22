@@ -20,22 +20,44 @@ if (!program.args.length) {
 // create an instance
 var __short__ = new __module__(program);
 
-// success
-__short__.on("complete", function(result) {
-    console.log("complete:", result);
-});
+// call JavaScript API
+var __short__ = new __module__(program);
+__short__.on("complete", complete);
+__short__.on("error", error);
+__short__.on("info", info);
+__short__.fetch(url, callback);
 
-// failure
-__short__.on("error", function(err) {
+// callback function
+function callback(err, res) {
+    if (err) {
+        console.log("failure:", err);
+    } else {
+        console.log("success:", res.length);
+    }
+}
+
+// success handler
+function complete(res) {
+    console.log("complete:");
+    if (program.json) {
+        var json = JSON.stringify(res);
+        util.print(json);
+    }
+    if (program.text || !program.json) {
+        res.forEach(function(url) {
+            util.print(url + "\n");
+        });
+    }
+}
+
+// failure handler
+function error(err) {
     console.error("error:", err);
     process.exit(1);
-});
+}
 
-// progress
-__short__.on("info", function(info) {
+// progress handler
+function info(str) {
     if (program.quiet) return;
-    console.log("info:", info);
-});
-
-// run the method with arguments
-__short__.__method__(program.args);
+    console.log("info:", str);
+}

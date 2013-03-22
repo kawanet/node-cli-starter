@@ -1,12 +1,16 @@
 # node-cli-starter - Node.js CLI Module Starter
 
-Generate a Node.js module skelton package for CLI applications.
+Generate a Node.js module skeleton package for CLI applications.
 
 ## Usage
 
 ```sh
     npm install -g git-starter
     git-starter node-cli-starter my-module
+    cd my-module
+    git init
+    git add .
+    git commit -m 'first commit'
 ```
 
 ## Author

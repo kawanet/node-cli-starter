@@ -1,6 +1,6 @@
 {
     "name": "node-cli-starter",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Node.js CLI Module Starter",
     "main": "lib/__short__.js",
     "bin": {

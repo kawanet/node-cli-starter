@@ -2,24 +2,46 @@
 
 __description__
 
+## Installation
+
+```sh
+    npm install __name__
+```
+
 ## Usage
 
-```javascript
-    var __short__ = new __module__(program);
+CLI:
 
-    __short__.on("done", function(result) {
-        console.log(result);
+```
+    $ node __name__ -h
+```
+
+JavaScript API:
+
+```javascript
+    var __module__ = require("__short__");
+
+    var __short__ = new __module__(opts);
+
+    __short__.on("complete", function(res) {
+        console.log(res);
     });
 
     __short__.on("error", function(err) {
         console.error(err);
     });
 
-    __short__.on("info", function(info) {
-        console.log(info);
+    __short__.on("info", function(str) {
+        console.log(str);
     });
 
-    __short__.__method__(input);
+    __short__.__method__(input, function(err, res) {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log(res);
+        }
+    });
 ```
 
 ## Author
