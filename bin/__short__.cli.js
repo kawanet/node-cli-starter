@@ -17,37 +17,27 @@ if (!program.args.length) {
     process.exit(1);
 }
 
-// create an instance
-var __short__ = new __module__(program);
+var arg = program.args.shift();
 
 // call JavaScript API
 var __short__ = new __module__(program);
 __short__.on("complete", complete);
 __short__.on("error", error);
-__short__.on("info", info);
-__short__.fetch(url, callback);
+__short__.on("progress", progress);
+__short__.__method__(arg, callback);
 
 // callback function
 function callback(err, res) {
     if (err) {
         console.log("failure:", err);
     } else {
-        console.log("success:", res.length);
+        console.log("success:", res);
     }
 }
 
 // success handler
 function complete(res) {
-    console.log("complete:");
-    if (program.json) {
-        var json = JSON.stringify(res);
-        util.print(json);
-    }
-    if (program.text || !program.json) {
-        res.forEach(function(url) {
-            util.print(url + "\n");
-        });
-    }
+    console.log("complete:", res);
 }
 
 // failure handler
@@ -57,7 +47,7 @@ function error(err) {
 }
 
 // progress handler
-function info(str) {
+function progress(info) {
     if (program.quiet) return;
-    console.log("info:", str);
+    console.log("progress:", info);
 }

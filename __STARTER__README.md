@@ -31,8 +31,8 @@ JavaScript API:
         console.error(err);
     });
 
-    __short__.on("info", function(str) {
-        console.log(str);
+    __short__.on("progress", function(info) {
+        console.log(info);
     });
 
     __short__.__method__(input, function(err, res) {

@@ -32,9 +32,9 @@ describe('__module__', function() {
             __short__.__method__(ng_input);
         });
 
-        it('emit "info" on progress', function(done) {
+        it('emit "progress" on progress', function(done) {
             var buf = [];
-            __short__.on("info", function(info) {
+            __short__.on("progress", function(info) {
                 // console.warn(info);
                 buf.push(info);
             });
