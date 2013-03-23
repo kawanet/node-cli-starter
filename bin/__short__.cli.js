@@ -2,13 +2,14 @@
 
 var __module__ = require("../lib/__short__");
 var program = require('commander');
+var colors = require("colors");
 var pkg = require(__dirname + "/../package.json");
 
 program.version(pkg.version);
 program.usage('[options] <args ...>');
-program.option('-q, --quiet', 'suppress messages');
-program.option('-f, --foo', 'foo without argument');
-program.option('-b, --bar <args>', 'bar with argument');
+program.option('-v, --verbose', 'output verbose messages');
+program.option('-f, --foo', 'foo without arguments');
+program.option('-b, --bar <args>', 'bar with an argument');
 program.parse(process.argv);
 
 // die when called without arguments
@@ -29,25 +30,25 @@ __short__.__method__(arg, callback);
 // callback function
 function callback(err, res) {
     if (err) {
-        console.log("failure:", err);
+        // console.log("failure:", err);
     } else {
-        console.log("success:", res);
+        // console.log("success:", res);
     }
 }
 
 // success handler
 function complete(res) {
-    console.log("complete:", res);
+    console.log(res);
 }
 
 // failure handler
 function error(err) {
-    console.error("error:", err);
+    console.error(err.toString().inverse.red);
     process.exit(1);
 }
 
 // progress handler
 function progress(info) {
-    if (program.quiet) return;
-    console.log("progress:", info);
+    if (!program.verbose) return;
+    console.log(info.toString().cyan);
 }

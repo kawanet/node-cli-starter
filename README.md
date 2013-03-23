@@ -1,6 +1,6 @@
-# node-cli-starter - Node.js CLI Module Starter
+# node-cli-starter
 
-Generate a Node.js module skeleton package for CLI applications.
+Node.js CLI Packaged Module Skeleton Starter
 
 ## Usage
 
@@ -12,6 +12,18 @@ Generate a Node.js module skeleton package for CLI applications.
     git add .
     git commit -m 'first commit'
 ```
+
+## Examples
+
+Following packages are generated with [node-cli-starter](https://npmjs.org/package/node-cli-starter) skeleton:
+
+https://github.com/kawanet/link-picker
+
+https://github.com/kawanet/fbgraph-batch
+
+## See Also
+
+[git-starter](https://npmjs.org/package/git-starter) - Git Repository Starter
 
 ## Author
 

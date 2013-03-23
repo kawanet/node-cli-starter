@@ -1,4 +1,4 @@
-# __name__ - __description__
+# __name__
 
 __description__
 

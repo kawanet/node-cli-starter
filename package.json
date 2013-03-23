@@ -1,13 +1,14 @@
 {
     "name": "node-cli-starter",
-    "version": "0.0.6",
-    "description": "Node.js CLI Module Starter",
+    "version": "0.0.7",
+    "description": "Node.js CLI Packaged Module Skeleton Starter",
     "main": "lib/__short__.js",
     "bin": {
         "__name__": "bin/__short__.cli.js"
     },
     "dependencies": {
-        "commander": "*"
+        "commander": "*",
+        "colors": "*"
     },
     "devDependencies": {
         "chai": "*",
