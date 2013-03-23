@@ -8,8 +8,8 @@ var pkg = require(__dirname + "/../package.json");
 program.version(pkg.version);
 program.usage('[options] <args ...>');
 program.option('-v, --verbose', 'output verbose messages');
-program.option('-f, --foo', 'foo without arguments');
-program.option('-b, --bar <args>', 'bar with an argument');
+program.option('-f, --foo', 'option foo without arguments');
+program.option('-b, --bar <arg>', 'option bar with an argument');
 program.parse(process.argv);
 
 // die when called without arguments

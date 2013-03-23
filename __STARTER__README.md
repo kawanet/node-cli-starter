@@ -2,40 +2,72 @@
 
 __description__
 
-## Installation
+## Usage
+
+This package provides both interfaces of CLI and JavaScript API.
+
+## CLI
+
+```
+    $ npm install -g __name__
+
+    $ __name__
+
+    Usage: __name__ [options] <args ...>
+
+    Options:
+
+      -h, --help        output usage information
+      -V, --version     output the version number
+      -v, --verbose     output verbose messages
+      -f, --foo         option foo without arguments
+      -b, --bar <arg>   option bar with an argument
+```
+
+## JavaScript API
+
+### Installation
 
 ```sh
     npm install __name__
 ```
 
-## Usage
-
-CLI:
-
-```
-    $ node __name__ -h
-```
-
-JavaScript API:
+### Callback Style
 
 ```javascript
-    var __module__ = require("__short__");
+    var __module__ = require("__name__");
 
-    var __short__ = new __module__(opts);
+    var opts = {};
+    var input = "...";
 
-    __short__.on("complete", function(res) {
+    __module__(opts).__method__(input, function(err, res) {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log(res);
+        }
+    });
+```
+
+### Event Style
+
+```javascript
+    var __module__ = require("__name__");
+
+    var opts = {};
+    var input = "...";
+
+    var __short__ = new __module__(opts)
+    .on("complete", function(res) {
         console.log(res);
-    });
-
-    __short__.on("error", function(err) {
+    })
+    .on("error", function(err) {
         console.error(err);
-    });
-
-    __short__.on("progress", function(info) {
+    })
+    .on("progress", function(info) {
         console.log(info);
-    });
-
-    __short__.__method__(input, function(err, res) {
+    })
+    .__method__(input, function(err, res) {
         if (err) {
             console.error(err);
         } else {
