@@ -58,7 +58,7 @@ This package provides both interfaces of CLI and JavaScript API.
     var input = "...";
 
     var __short__ = new __module__(opts)
-    .on("complete", function(res) {
+    .on("__method__", function(res) {
         console.log(res);
     })
     .on("error", function(err) {
@@ -67,13 +67,7 @@ This package provides both interfaces of CLI and JavaScript API.
     .on("progress", function(info) {
         console.log(info);
     })
-    .__method__(input, function(err, res) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log(res);
-        }
-    });
+    .__method__(input);
 ```
 
 ## Author

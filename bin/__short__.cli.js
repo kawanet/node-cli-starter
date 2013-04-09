@@ -22,7 +22,7 @@ var arg = program.args.shift();
 
 // call JavaScript API
 var __short__ = new __module__(program);
-__short__.on("complete", complete);
+__short__.on("__method__", complete);
 __short__.on("error", error);
 __short__.on("progress", progress);
 __short__.__method__(arg, callback);
