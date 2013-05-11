@@ -1,7 +1,7 @@
 // __short__.test.js
 
 var expect = require('chai').expect;
-var __module__ = require("../lib/__short__");
+var __module__ = require("../lib/__name__");
 
 describe('__module__', function() {
 

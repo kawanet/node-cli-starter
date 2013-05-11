@@ -1,8 +1,8 @@
 {
     "name": "node-cli-starter",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "Node.js CLI Packaged Module Skeleton Starter",
-    "main": "lib/__short__.js",
+    "main": "lib/__name__.js",
     "bin": {
         "__name__": "bin/__short__.cli.js"
     },

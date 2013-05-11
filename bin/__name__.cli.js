@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var __module__ = require("../lib/__short__");
+var __module__ = require("../lib/__name__");
 var program = require('commander');
 var colors = require("colors");
 var pkg = require(__dirname + "/../package.json");
