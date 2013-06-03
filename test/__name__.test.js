@@ -1,4 +1,4 @@
-// __short__.test.js
+/*! __name__.test.js */
 
 var assert = require('chai').assert;
 var __module__ = require("../lib/__name__");
