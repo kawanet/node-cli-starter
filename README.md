@@ -5,12 +5,12 @@ Node.js CLI Packaged Module Skeleton Starter
 ## Usage
 
 ```sh
-    npm install -g git-starter
-    git-starter node-cli-starter my-module
-    cd my-module
-    git init
-    git add .
-    git commit -m 'first commit'
+npm install -g git-starter
+git-starter node-cli-starter my-module
+cd my-module
+git init
+git add .
+git commit -m 'first commit'
 ```
 
 ## Examples

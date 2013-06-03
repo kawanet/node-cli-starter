@@ -14,8 +14,8 @@ program.parse(process.argv);
 
 // die when called without arguments
 if (!program.args.length) {
-    program.outputHelp();
-    process.exit(1);
+  program.outputHelp();
+  process.exit(1);
 }
 
 var arg = program.args.shift();
@@ -28,27 +28,31 @@ __short__.on("progress", progress);
 __short__.__method__(arg, callback);
 
 // callback function
+
 function callback(err, res) {
-    if (err) {
-        // console.log("failure:", err);
-    } else {
-        // console.log("success:", res);
-    }
+  if (err) {
+    // console.log("failure:", err);
+  } else {
+    // console.log("success:", res);
+  }
 }
 
 // success handler
+
 function complete(res) {
-    console.log(res);
+  console.log(res);
 }
 
 // failure handler
+
 function error(err) {
-    console.error(err.toString().inverse.red);
-    process.exit(1);
+  console.error(err.toString().inverse.red);
+  process.exit(1);
 }
 
 // progress handler
+
 function progress(info) {
-    if (!program.verbose) return;
-    console.log(info.toString().cyan);
+  if (!program.verbose) return;
+  console.log(info.toString().cyan);
 }

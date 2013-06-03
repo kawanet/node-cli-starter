@@ -1,22 +1,22 @@
 {
-    "name": "node-cli-starter",
-    "version": "0.0.10",
-    "description": "Node.js CLI Packaged Module Skeleton Starter",
-    "main": "lib/__name__.js",
-    "bin": {
-        "__name__": "bin/__short__.cli.js"
-    },
-    "dependencies": {
-        "commander": "*",
-        "colors": "*"
-    },
-    "devDependencies": {
-        "chai": "*",
-        "grunt": "*",
-        "grunt-contrib-jshint": "*",
-        "grunt-mocha-test": "*"
-    },
-    "repository": "git://github.com/kawanet/node-cli-starter.git",
-    "author": "@kawanet",
-    "license": "MIT"
+  "name": "node-cli-starter",
+  "version": "0.0.10",
+  "description": "Node.js CLI Packaged Module Skeleton Starter",
+  "main": "lib/__name__.js",
+  "bin": {
+    "__name__": "bin/__short__.cli.js"
+  },
+  "dependencies": {
+    "commander": "*",
+    "colors": "*"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "grunt": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-mocha-test": "*"
+  },
+  "repository": "git://github.com/kawanet/node-cli-starter.git",
+  "author": "@kawanet",
+  "license": "MIT"
 }

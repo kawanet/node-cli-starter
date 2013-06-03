@@ -9,19 +9,19 @@ This package provides both interfaces of CLI and JavaScript API.
 ## CLI
 
 ```
-    $ npm install -g __name__
+$ npm install -g __name__
 
-    $ __name__
+$ __name__
 
-    Usage: __name__ [options] <args ...>
+Usage: __name__ [options] <args ...>
 
-    Options:
+Options:
 
-      -h, --help        output usage information
-      -V, --version     output the version number
-      -v, --verbose     output verbose messages
-      -f, --foo         option foo without arguments
-      -b, --bar <arg>   option bar with an argument
+  -h, --help        output usage information
+  -V, --version     output the version number
+  -v, --verbose     output verbose messages
+  -f, --foo         option foo without arguments
+  -b, --bar <arg>   option bar with an argument
 ```
 
 ## JavaScript API
@@ -29,45 +29,45 @@ This package provides both interfaces of CLI and JavaScript API.
 ### Installation
 
 ```sh
-    npm install __name__
+npm install __name__
 ```
 
 ### Callback Style
 
 ```javascript
-    var __module__ = require("__name__");
+var __module__ = require("__name__");
 
-    var opts = {};
-    var input = "...";
+var opts = {};
+var input = "...";
 
-    __module__(opts).__method__(input, function(err, res) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log(res);
-        }
-    });
+__module__(opts).__method__(input, function(err, res) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(res);
+  }
+});
 ```
 
 ### Event Style
 
 ```javascript
-    var __module__ = require("__name__");
+  var __module__ = require("__name__");
 
-    var opts = {};
-    var input = "...";
+  var opts = {};
+  var input = "...";
 
-    var __short__ = new __module__(opts)
-    .on("__method__", function(res) {
-        console.log(res);
-    })
-    .on("error", function(err) {
-        console.error(err);
-    })
-    .on("progress", function(info) {
-        console.log(info);
-    })
-    .__method__(input);
+  var __short__ = new __module__(opts)
+  .on("__method__", function(res) {
+    console.log(res);
+  })
+  .on("error", function(err) {
+    console.error(err);
+  })
+  .on("progress", function(info) {
+    console.log(info);
+  })
+  .__method__(input);
 ```
 
 ## Author
