@@ -13,6 +13,7 @@
     "devDependencies": {
         "chai": "*",
         "grunt": "*",
+        "grunt-contrib-jshint": "*",
         "grunt-mocha-test": "*"
     },
     "repository": "git://github.com/kawanet/node-cli-starter.git",

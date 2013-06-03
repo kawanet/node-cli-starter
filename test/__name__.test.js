@@ -1,6 +1,6 @@
 // __short__.test.js
 
-var expect = require('chai').expect;
+var assert = require('chai').assert;
 var __module__ = require("../lib/__name__");
 
 describe('__module__', function() {
@@ -9,30 +9,30 @@ describe('__module__', function() {
         var __short__;
         var opts = {};
         var ok_input = "something";
-        var ng_input = "";
+        var ng_input = null;
 
         beforeEach(function() {
             __short__ = new __module__(opts);
         });
 
-        it('emit "__method__" on success', function(done) {
+        it('should emit "__method__" event on success', function(done) {
             __short__.on("__method__", function(result) {
                 // console.warn(result);
-                expect(result).to.not.be.empty;
+                assert(result, 'result should not be empty');
                 done();
             });
             __short__.__method__(ok_input);
         });
 
-        it('emit "error" on failure', function(done) {
+        it('should emit "error" event on failure', function(done) {
             __short__.on("error", function(err) {
-                // console.warn(err);
+                assert(err, 'err should not be empty');
                 done();
             });
             __short__.__method__(ng_input);
         });
 
-        it('emit "progress" on progress', function(done) {
+        it('should emit "progress" event on progress', function(done) {
             var buf = [];
             __short__.on("progress", function(info) {
                 // console.warn(info);
@@ -40,7 +40,7 @@ describe('__module__', function() {
             });
             __short__.on("__method__", function(result) {
                 // console.warn(result);
-                expect(buf).to.not.be.empty;
+                assert(buf.length, 'result should have some progresses');
                 done();
             });
             __short__.__method__(ok_input);

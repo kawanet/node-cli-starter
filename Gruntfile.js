@@ -2,21 +2,30 @@
 
 module.exports = function(grunt) {
 
-    // Add our custom tasks.
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-mocha-test');
 
-    // Project configuration.
     grunt.initConfig({
-        mochaTest: {
-            files: ['test/*.test.js']
+        // https://github.com/gruntjs/grunt-contrib-jshint
+        jshint: {
+            all: {
+                src: ['./*.js', 'bin/*.js', 'lib/*.js', 'test/*.js']
+            },
+            options: {
+                laxcomma: true // I001: Comma warnings can be turned off with 'laxcomma'.
+            }
         },
-        mochaTestConfig: {
+
+        // https://github.com/pghalliday/grunt-mocha-test
+        mochaTest: {
+            all: {
+                src: ['test/*.test.js']
+            },
             options: {
                 reporter: 'spec'
             }
         }
     });
 
-    // Default task.
-    grunt.registerTask('default', 'mochaTest');
+    grunt.registerTask('default', ['jshint', 'mochaTest']);
 };
